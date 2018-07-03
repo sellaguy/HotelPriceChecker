@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TTGDB" Class="DatabaseAPIConnectorDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ttgdbserver.database.windows.net;Initial Catalog=TTGDB;Persist Security Info=True;User ID=dbadmin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TTGDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.APIActivation" Member="APIActivations">
+    <Type Name="APIActivation">
+      <Column Name="TimeToSwitch" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SwitchTo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SpecialDays" Member="SpecialDays">
+    <Type Name="SpecialDay">
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hotel" Member="Hotels">
+    <Type Name="Hotel">
+      <Column Name="HotelKey" Type="System.String" DbType="NVarChar(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HotelName" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
